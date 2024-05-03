@@ -60,7 +60,7 @@ const database = {
         
     }
 ],
-section: [{
+sections: [{
         id : 1,
         name: "Lodge" 
 },
@@ -263,4 +263,23 @@ attractionSections: [{
 }
 ]
 
+}
+
+export const getGuests = () => {
+    return database.guests.map(guests => ({...guests}))
+}
+export const getSections = () => {
+    return database.sections.map(sections => ({...sections}))
+}
+export const getServices = () => {
+    return database.services.map(services => ({...services}))
+}
+export const getServiceSections = () => {
+    return database.serviceSections.map(serviceSections => ({...serviceSections}))
+}
+export const getAttractions = () => {
+    return database.attractions.map(attractions => ({...attractions}))
+}
+export const getAttractionSections = () => {
+    return database.attractionSections.map(attractionSections => ({...attractionSections}))
 }
