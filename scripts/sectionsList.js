@@ -77,34 +77,42 @@ document.addEventListener(
         }
     }
 )
-export const servicesList =() => {
-    let servicehtml = `<ul> Cider Falls Park offers the following services`
-    for (const service of services){
-        servicehtml += `<li data-type = "service" data-id = "${service.id}"> ${service.name}</li>`
+
+export const servicesList = () => {
+    let serviceHTML = `<ul class="servicesList">Cider Falls Park offers the following services: `
+    for (const service of services) {
+        serviceHTML += `<li data-type="service" data-id="${service.id}">${service.name}</li>`
     }
-    servicehtml += `</ul>`
-    return servicehtml
+    serviceHTML +=`</ul>`
+    return serviceHTML
 }
 document.addEventListener(
     "click",
-    (clickEvent) =>{
+    (clickEvent) => {
         const itemClicked = clickEvent.target
-        if (itemClicked.dataset.type ==="service"){
+        if (itemClicked.dataset.type === "service"){
             let alert = ""
-            for (const serviceSection of servicesSection){
-                
-                for(const section of sections){
-                    if( parseInt(itemClicked.dataset.id) === serviceSection.serviceId && section.id === serviceSection.sectionId){
-                        alert += `${section.name}`
+            let alertTwo = ""
+            let counter = 0
+            for (const serviceSec of servicesSection) {
+                for (const section of sections) {
+                    if( parseInt(itemClicked.dataset.id) === serviceSec.serviceId && section.id === serviceSec.sectionId) {
+                        counter ++
+                        if (counter === 1){
+                            alert += `${section.name} `
+                        }
+                        if (counter > 1){
+                            alertTwo +=`, ${section.name}`
+                        }
+
                     }
-            }
                     
-            } 
-            window.alert(`This service is available at ${alert}`)
+                }
+            }
+            window.alert(`This service is available in ${alert}${alertTwo}.`)
         }
     }
 )
-
 
 
 // loop section
