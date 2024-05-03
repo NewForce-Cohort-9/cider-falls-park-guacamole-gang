@@ -1,6 +1,6 @@
-import { getGuestList } from "./database.js"
+import { getGuests } from "./database.js"
 
-const guests = getGuestList()
+const guests = getGuests()
 
 export const Guests = () => {
   let guestsHTML = "<ul>"
