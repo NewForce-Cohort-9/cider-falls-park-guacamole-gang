@@ -1,7 +1,7 @@
 import { sectionsList } from "./sectionsList.js";
 
-const mainContainer = document.querySelector("#container")
+const sectionContainer = document.querySelector("#sectionContainer")
 
 const applicationHTML = `${sectionsList()}`
 
-mainContainer.innerHTML = applicationHTML
+sectionContainer.innerHTML = applicationHTML

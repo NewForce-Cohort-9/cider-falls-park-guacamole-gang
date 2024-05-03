@@ -12,34 +12,38 @@ const guests = getGuests()
 export const sectionsList = () => {
     let sectionHTML = `<section>`
     for (const section of sections) {
+    sectionHTML += `<div class="${section.id}">`
+
         sectionHTML += `<h2 data-type="section" data-id="${section.id}">${section.name}</h2>`
-        sectionHTML+= `<div>Services:</div>`
+        sectionHTML+= `<ul><h3>Services:</h3>`
         for (const serviceSec of servicesSection) {
             
             for (const service of services) {
                 
                 if(section.id === serviceSec.sectionId && serviceSec.serviceId === service.id) {
                     
-                    sectionHTML += `<div>${service.name}</div>`
+                    sectionHTML += `<li>${service.name}</li>`
                 }
-                
             }
+            
         }
-    } 
-    sectionHTML += `<div>Other Attractions:</div>`
-    for (const attractionSec of attractionSection) {
-        for (const attraction of attractions) {
-            for (const section of sections) {
+        sectionHTML += `</ul>`
+        sectionHTML += `<ul><h3>Other Attractions:</h3>`
+        for (const attractionSec of attractionSection) {
+            for (const attraction of attractions) {
                 if(section.id === attractionSec.sectionId && attractionSec.attractionId === attraction.id) {
-                    sectionHTML += `<div> ${attraction.name}</div>`
+                    
+                    sectionHTML += `<li> ${attraction.name}</li>`
                 }
-                
+                    
+              }
             }
-        }
-    }      
-    sectionHTML += `</section>`
-    return sectionHTML
-}
+            sectionHTML += `</ul>`
+            sectionHTML += `</div>`
+        } 
+        sectionHTML += `</section>`
+        return sectionHTML
+    } 
 
 document.addEventListener(
     "click",
