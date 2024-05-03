@@ -12,7 +12,7 @@ export const sectionsList = () => {
     let sectionHTML = `<section>`
     for (const serviceSec of servicesSection) {
         for (const section of sections) {
-            sectionHTML += `<h2>${section.name}</h2>`
+            sectionHTML += `<h2 data-type="section">${section.name}</h2>`
             sectionHTML+= `<div>Services:</div>`
             for (const service of services) {
                 
@@ -37,3 +37,19 @@ export const sectionsList = () => {
     sectionHTML += `</section>`
     return sectionHTML
 }
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.dataset.type === "section"){
+            let counter = 0
+            for (const guest of guests) {
+                if(parseInt(itemClicked.dataset.id) === guest.sectionId)
+                    counter ++
+                
+            }
+            window.alert(`There are ${counter} guests in this area.`)
+        }
+    }
+)
