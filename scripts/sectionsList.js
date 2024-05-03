@@ -60,3 +60,18 @@ document.addEventListener(
         }
     }
 )
+
+document.addEventListener(
+    "click",
+    (clickEvent) =>{
+        const itemClicked = clickEvent.target
+        if (itemClicked ==="section"){
+            let counter = 0
+            for (const service of services){
+                if (parseInt(itemClicked.dataset.id)=== service.serviceId)
+                    counter ++
+            } 
+            window.alert(``)
+        }
+    }
+)
