@@ -1,22 +1,25 @@
-import { getSections, getServices, getAttractions, getAttractionSections, getServiceSections } from "./database.js"
+import { getSections, getServices, getAttractions, getAttractionSections, getServiceSections, getGuests } from "./database.js"
 
 const sections = getSections()
 const servicesSection = getServiceSections()
 const services = getServices()
 const attractionSection= getAttractionSections()
 const attractions = getAttractions()
+const guests = getGuests()
 
 
 
 export const sectionsList = () => {
     let sectionHTML = `<section>`
-    for (const serviceSec of servicesSection) {
-        for (const section of sections) {
-            sectionHTML += `<h2 data-type="section">${section.name}</h2>`
-            sectionHTML+= `<div>Services:</div>`
+    for (const section of sections) {
+        sectionHTML += `<h2 data-type="section" data-id="${section.id}">${section.name}</h2>`
+        sectionHTML+= `<div>Services:</div>`
+        for (const serviceSec of servicesSection) {
+            
             for (const service of services) {
                 
                 if(section.id === serviceSec.sectionId && serviceSec.serviceId === service.id) {
+                    
                     sectionHTML += `<div>${service.name}</div>`
                 }
                 
