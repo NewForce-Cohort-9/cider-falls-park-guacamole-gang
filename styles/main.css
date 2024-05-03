@@ -2,12 +2,8 @@
 
 /*Typography
 --------------------------------------------------------------*/
-
-#sectionContainer{
-  display: flex;
-    flex-direction: column;
-    border: 1px solid red;
-    max-width: 300px;
+#title {
+ 
 }
 
 .guestList {
@@ -17,4 +13,30 @@ flex-direction: column;
 
 header {
   text-align: center;
+}
+
+.detail--right--aligned {
+  display: flex;
+  border: 5px solid purple;
+  max-width: 700px;
+}
+
+.detail--main--grid {
+  display: flex;
+  border: 5px solid red;
+  max-width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+#sectionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ul {
+  list-style-type: none;
 }
