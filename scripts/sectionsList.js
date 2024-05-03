@@ -77,18 +77,30 @@ document.addEventListener(
         }
     }
 )
-
+export const servicesList =() => {
+    let servicehtml = `<ul> Cider Falls Park offers the following services`
+    for (const service of services){
+        servicehtml += `<li data-type = "service" data-id = "${service.id}"> ${service.name}</li>`
+    }
+    servicehtml += `</ul>`
+    return servicehtml
+}
 document.addEventListener(
     "click",
     (clickEvent) =>{
         const itemClicked = clickEvent.target
-        if (itemClicked ==="section"){
-            let counter = 0
-            for (const service of services){
-                if (parseInt(itemClicked.dataset.id)=== service.serviceId)
-                    counter ++
+        if (itemClicked.dataset.type ==="service"){
+            let alert = ""
+            for (const serviceSection of servicesSection){
+                
+                for(const section of sections){
+                    if( parseInt(itemClicked.dataset.id) === serviceSection.serviceId && section.id === serviceSection.sectionId){
+                        alert += `${section.name}`
+                    }
+            }
+                    
             } 
-            window.alert(``)
+            window.alert(`This service is available at ${alert}`)
         }
     }
 )

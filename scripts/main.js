@@ -1,11 +1,14 @@
 import { Guests} from "./guestsList.js"
-import { sectionsList } from "./sectionsList.js"
+import { sectionsList, servicesList } from "./sectionsList.js"
 
 
 const sectionContainer = document.querySelector("#sectionContainer")
 
 const applicationHTML = `
 <h1>Cider Falls Park</h1>
+<article class= "servicesList">
+${servicesList()}
+</article>
 
 <article class="detail--right aligned list">
     <section class="guestList">
