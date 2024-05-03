@@ -87,43 +87,43 @@ sections: [{
 ],
 services: [{
     id: 1,
-    name: "lodging"
+    name: "Lodging"
 },
 {
     id: 2, 
-    name: "parking",
+    name: "Parking",
 },
 {
     id: 3,
-    name: "information"
+    name: "Information"
 },
 {
     id: 4, 
-    name: "picnicking",
+    name: "Picnicking",
 },
 {
     id: 5,
-    name: "hiking"
+    name: "Hiking"
 },
 {
     id: 6,
-    name: "rock climbing"
+    name: "Rock Climbing"
 },
 {
     id: 7,
-    name: "rafting"
+    name: "Rafting"
 },
 {
     id: 8,
-    name: "canoeing"
+    name: "Canoeing"
 },
 {
     id: 9,
-    name: "fishing"
+    name: "Fishing"
 },
 {
     id: 10,
-    name: "zip lines"
+    name: "Zip lines"
 }
 ],
 serviceSections: [{
@@ -217,11 +217,11 @@ serviceSections: [{
 ],
 attractions: [{
     id: 1,
-    name: "hotel"
+    name: "Hotel"
 },
 {
     id: 2,
-    name: "restaurant"
+    name: "Restaurant"
 },
 {
     id: 3,
@@ -229,11 +229,11 @@ attractions: [{
 },
 {
     id: 4,
-    name: "children play areas"
+    name: "Children play areas"
 },
 {
     id: 5,
-    name: "food vendors"
+    name: "Food vendors"
 }
 ],
 attractionSections: [{

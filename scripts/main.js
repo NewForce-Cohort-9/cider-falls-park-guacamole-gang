@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { getGuests } from "./guestsList.js"
 import { getSections } from "./sectionsList.js"
 import { getServices } from "./database.js"
@@ -51,3 +52,12 @@ const applicationHTML = `
 `
 
 mainContainer.innerHTML = applicationHTML
+=======
+import { sectionsList } from "./sectionsList.js";
+
+const sectionContainer = document.querySelector("#sectionContainer")
+
+const applicationHTML = `${sectionsList()}`
+
+sectionContainer.innerHTML = applicationHTML
+>>>>>>> main
