@@ -10,9 +10,9 @@ const guests = getGuests()
 
 
 export const sectionsList = () => {
-    let sectionHTML = `<section>`
+    let sectionHTML = `<section id="sectionHTML--grid">`
     for (const section of sections) {
-        sectionHTML += `<div class="${section.id}">`
+        sectionHTML += `<div class="sectionId" class="${section.id}">`
         sectionHTML += `<h2 data-type="section" data-id="${section.id}">${section.name}</h2>`
         sectionHTML+= `<ul><h3>Services:</h3>`
 
@@ -21,7 +21,7 @@ export const sectionsList = () => {
 
         let servicehtml = servicefilter.map( serviceSec => {
             const service = services.find(service => serviceSec.serviceId === service.id)
-            return`<li>${service.name}</li>`
+            return`<li class="serviceName">${service.name}</li>`
         })
         // console.log(servicehtml)
 
@@ -79,9 +79,9 @@ document.addEventListener(
 )
 
 export const servicesList = () => {
-    let serviceHTML = `<ul class="servicesList">Cider Falls Park offers the following services: `
+    let serviceHTML = `<ul class="servicesList"><h4 id="servicesListHeader">Cider Falls Park offers the following services: </h4>`
     for (const service of services) {
-        serviceHTML += `<li data-type="service" data-id="${service.id}">${service.name}</li>`
+        serviceHTML += `<li id="servicesListUl" data-type="service" data-id="${service.id}">${service.name}</li>`
     }
     serviceHTML +=`</ul>`
     return serviceHTML

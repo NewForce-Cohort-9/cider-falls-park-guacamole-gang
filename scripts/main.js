@@ -19,7 +19,7 @@ ${servicesList()}
 
 <article class="detail--main grid">
     <section class="sectionsList">
-        <h2>Sections</h2>
+        <h2 id="sectionHeader">Sections</h2>
         ${sectionsList()}
     </section>
 </article>
