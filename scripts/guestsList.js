@@ -7,7 +7,7 @@ export const Guests = () => {
 
   for (const guest of guests) {
     guestsHTML += `
-    <li data-type = "guest"
+    <li id="guestNames" data-type = "guest"
     data-name = "${guest.name}"
     data-id = "${guest.id}"
     data-sectionId = "${guest.sectionId}"

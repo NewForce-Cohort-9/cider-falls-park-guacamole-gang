@@ -79,9 +79,9 @@ document.addEventListener(
 )
 
 export const servicesList = () => {
-    let serviceHTML = `<ul class="servicesList"><h4 id="servicesListHeader">Cider Falls Park offers the following services: </h4>`
+    let serviceHTML = `<ul id="serviceList"><h4 id="servicesListHeader">Cider Falls Park offers the following services: </h4>`
     for (const service of services) {
-        serviceHTML += `<li id="servicesListUl" data-type="service" data-id="${service.id}">${service.name}</li>`
+        serviceHTML += `<li id="servicesList__Ul" data-type="service" data-id="${service.id}">${service.name}</li>`
     }
     serviceHTML +=`</ul>`
     return serviceHTML

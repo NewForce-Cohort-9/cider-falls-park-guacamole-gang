@@ -1,63 +1,87 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20+Charted&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")*/
 
-/*Typography
---------------------------------------------------------------*/
 body {
   background-color: #c2f7c9;
-  background-image: url('./photos/backg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: url('./photos/treesbg.jpg');
+  background-size: 1950px 1500px;
+  background-repeat: no-repeat;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   text-decoration: underline;
-  background-image: url('./photos/parkLogo.jpg');
-  background-attachment: fixed;
-  height: 200px;
-  background-repeat: no-repeat;
-  object-position: 80% 100%;
 }
 
-
-.guestList { /*Right-side of page*/
-  float: right;
-  border: 2px solid black;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 20px;
-  padding-bottom: 20px;
+#header {
+  text-align: center;
   background-color: #c2f7c9;
+  padding: 15px;
+
+}
+.parkLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 400px;
+  height: 175px;
+  margin-bottom: 50px;
+  border: thick double #c2f7c9;
 }
 
 .serviceList  { /*Top of page*/
+  text-align: center;
   display: flex;
-  width: 700px;
+  width: 900px;
   border: 2px solid black;
   margin-left: 50%;
   transform: translateX(-50%);
+  text-decoration: underline;
+  margin-top: -10px;
+  margin-bottom: 20px;
   background-color: #c2f7c9;
 }
 
-#servicesListUl { /*Services within serviceList box*/
+#servicesList__Ul { /*Services within serviceList box*/
   display: inline-block; /*This removes the bullet points and moves them side-by-side*/
   margin-right: 10px;
   margin-bottom: 10px;
+  border: 1px solid black; /*double-check that this is okay with group*/
+  padding: 3px;
+  margin: 4px;
 }
 
+.guestList { /*Right-side of page*/
+  float: right;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 135px;
+  padding-bottom: 20px;
+  background-color: #c2f7c9;
+  height: 625px;
+  width: 250px;
+}
+
+#guestNames { /*Names within guest list*/
+  padding: 15px;
+}
+
+
 #sectionHeader { /*Still trying to figure out this one*/
-  text-decoration: underline;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
   height: 40px;
+  background-color: #c2f7c9;
+  padding-top: 10px;
   }
 
 .sectionsList { /*main grid*/
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 30px;
+  padding: 20px;
 }
 
 .sectionId { /*Title of each box*/
@@ -75,4 +99,12 @@ h1 {
   grid-template-columns: repeat(3, 1fr); /* Three columns */
   grid-template-rows: repeat(2); /* Two rows */
  justify-content: center;
+}
+
+#footer {
+  border: 1px solid black;
+  background-color: #c2f7c9;
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
 }
