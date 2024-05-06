@@ -6,22 +6,25 @@ body {
   background-repeat: no-repeat;
 }
 
+
 h1, h2 {
   text-align: center;
   text-decoration: underline;
 }
 
 #header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   background-color: #c2f7c9;
   padding: 15px;
-
+  margin-left: 35%;
+  margin-right: 35%;
+  border: 1px solid black;
 }
 .parkLogo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   width: 400px;
   height: 175px;
   margin-bottom: 50px;
@@ -102,9 +105,10 @@ h1, h2 {
 }
 
 #footer {
-  border: 1px solid black;
+  border: 2px solid black;
   background-color: #c2f7c9;
   text-align: center;
-  font-size: 12px;
-  margin: 5px;
+  font-size: 75%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
