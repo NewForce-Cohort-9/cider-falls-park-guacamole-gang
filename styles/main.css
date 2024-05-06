@@ -2,7 +2,7 @@
 
 /*Typography
 --------------------------------------------------------------*/
-/*#title {
+#title {
  
 }
 
@@ -29,14 +29,4 @@ header {
   flex-shrink: 1;
   flex-basis: 0;
   text-align: center;
-}
-
-#sectionContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.ul {
-  list-style-type: none;
 }
